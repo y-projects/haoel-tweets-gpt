@@ -23,7 +23,7 @@ export const Footer: FC = () => {
 					<IconBrandTwitter size={24} />
 				</a>
 
-				<a className='flex items-center hover:opacity-50' href='https://github.com/zenghongtu/haoel-gpt' target='_blank' rel='noreferrer'>
+				<a className='flex items-center hover:opacity-50' href='https://github.com/zenghongtu/haoel-tweets-gpt' target='_blank' rel='noreferrer'>
 					<IconBrandGithub size={24} />
 				</a>
 			</div>
