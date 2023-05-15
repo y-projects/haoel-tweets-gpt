@@ -8,8 +8,8 @@ export const Footer: FC = () => {
 
 			<div className='hidden sm:flex italic text-sm'>
 				Created by
-				<a className='hover:opacity-50 mx-1' href='https://twitter.com/zenghongtu' target='_blank' rel='noreferrer'>
-					Jason Zeng
+				<a className='hover:opacity-50 mx-1' href='https://github.com/zenghongtu' target='_blank' rel='noreferrer'>
+					JasonZeng
 				</a>
 				based on the tweets of
 				<a className='hover:opacity-50 ml-1' href='https://twitter.com/haoel' target='_blank' rel='noreferrer'>

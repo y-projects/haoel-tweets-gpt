@@ -21,10 +21,10 @@ export default function Home() {
 	const [apiKey, setApiKey] = useState<string>('');
 
 	const handleSearch = async () => {
-		if (!apiKey) {
-			alert('Please enter an API key.');
-			return;
-		}
+		// if (!apiKey) {
+		// 	alert('Please enter an API key.');
+		// 	return;
+		// }
 
 		if (!query) {
 			alert('Please enter a query.');
@@ -61,10 +61,10 @@ export default function Home() {
 	};
 
 	const handleAnswer = async () => {
-		if (!apiKey) {
-			alert('Please enter an API key.');
-			return;
-		}
+		// if (!apiKey) {
+		// 	alert('Please enter an API key.');
+		// 	return;
+		// }
 
 		if (!query) {
 			alert('Please enter a query.');
@@ -94,7 +94,7 @@ export default function Home() {
 		setChunks(results);
 
 		const prompt = endent`
-    Use the following passages to provide an answer to the query: "${query}"
+    Use the following tweets to provide an answer to the query: "${query}"
 
     ${results?.map((d: any) => d.content).join('\n\n')}
     `;
@@ -199,7 +199,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Hao Chen GPT</title>
+				<title>Hao Chen&apos;s GPT</title>
 				<meta name='description' content={`AI-powered search and chat for Hao Chen's tweets.`} />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
@@ -243,10 +243,10 @@ export default function Home() {
 								</div>
 
 								<div className='mt-2'>
-									<div>OpenAI API Key</div>
+									<div>OpenAI API Key(Optional)</div>
 									<input
 										type='password'
-										placeholder='OpenAI API Key'
+										placeholder='Use Your OpenAI API Key'
 										className='max-w-[400px] block w-full rounded-md border border-gray-300 p-2 text-black shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm'
 										value={apiKey}
 										onChange={(e) => {
@@ -271,36 +271,26 @@ export default function Home() {
 							</div>
 						)}
 
-						{apiKey.length === 51 ? (
-							<div className='relative w-full mt-4'>
-								<IconSearch className='absolute top-3 w-10 left-1 h-6 rounded-full opacity-50 sm:left-3 sm:top-4 sm:h-8' />
+						<div className='relative w-full mt-4'>
+							<IconSearch className='absolute top-3 w-10 left-1 h-6 rounded-full opacity-50 sm:left-3 sm:top-4 sm:h-8' />
 
-								<input
-									ref={inputRef}
-									className='h-12 w-full rounded-full border border-zinc-600 pr-12 pl-11 focus:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-800 sm:h-16 sm:py-2 sm:pr-16 sm:pl-16 sm:text-lg'
-									type='text'
-									placeholder='How do I start a startup?'
-									value={query}
-									onChange={(e) => setQuery(e.target.value)}
-									onKeyDown={handleKeyDown}
+							<input
+								ref={inputRef}
+								className='h-12 w-full rounded-full border border-zinc-600 pr-12 pl-11 focus:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-800 sm:h-16 sm:py-2 sm:pr-16 sm:pl-16 sm:text-lg'
+								type='text'
+								placeholder='How do I start a startup?'
+								value={query}
+								onChange={(e) => setQuery(e.target.value)}
+								onKeyDown={handleKeyDown}
+							/>
+
+							<button>
+								<IconArrowRight
+									onClick={mode === 'search' ? handleSearch : handleAnswer}
+									className='absolute right-2 top-2.5 h-7 w-7 rounded-full bg-blue-500 p-1 hover:cursor-pointer hover:bg-blue-600 sm:right-3 sm:top-3 sm:h-10 sm:w-10 text-white'
 								/>
-
-								<button>
-									<IconArrowRight
-										onClick={mode === 'search' ? handleSearch : handleAnswer}
-										className='absolute right-2 top-2.5 h-7 w-7 rounded-full bg-blue-500 p-1 hover:cursor-pointer hover:bg-blue-600 sm:right-3 sm:top-3 sm:h-10 sm:w-10 text-white'
-									/>
-								</button>
-							</div>
-						) : (
-							<div className='text-center font-bold text-3xl mt-7'>
-								Please enter your
-								<a className='mx-2 underline hover:opacity-50' href='https://platform.openai.com/account/api-keys'>
-									OpenAI API key
-								</a>
-								in settings.
-							</div>
-						)}
+							</button>
+						</div>
 
 						{loading ? (
 							<div className='mt-6 w-full'>

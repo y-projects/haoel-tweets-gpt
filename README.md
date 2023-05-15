@@ -1,4 +1,4 @@
-# Hao Chen GPT
+# Hao Chen's Tweets GPT
 
 AI-powered search and chat for [Hao Chen's](https://twitter.com/haoel) Twitter.
 
@@ -6,7 +6,7 @@ All code & data used is 100% open-source.
 
 ## How It Works
 
-Hao Chen GPT provides 2 things:
+Hao Chen's Tweets GPT provides 2 things:
 
 1. A search interface.
 2. A chat interface.
@@ -30,3 +30,15 @@ Results are ranked by similarity score and returned to the user.
 Chat builds on top of search. It uses search results to create a prompt that is fed into GPT-3.5-turbo.
 
 This allows for a chat-like experience where the user can ask questions about the book and get answers.
+
+### Notes
+
+卓越之识论道（Great minds discuss ideas）
+
+平常之识论事（Average minds discuss events）
+
+狹隘之识论人（Small minds discuss people）
+
+——CoolShell.cn 陈皓
+
+**R.I.P**
