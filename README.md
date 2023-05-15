@@ -4,6 +4,8 @@ AI-powered search and chat for [Hao Chen's](https://twitter.com/haoel) Twitter.
 
 All code & data used is 100% open-source.
 
+[Online](https://haoel-tweets-gpt.vercel.app/)
+
 ## How It Works
 
 Hao Chen's Tweets GPT provides 2 things:
