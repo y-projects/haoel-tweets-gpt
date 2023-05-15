@@ -199,8 +199,8 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Paul Graham GPT</title>
-				<meta name='description' content={`AI-powered search and chat for Paul Graham's essays.`} />
+				<title>Hao Chen GPT</title>
+				<meta name='description' content={`AI-powered search and chat for Hao Chen's tweets.`} />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
@@ -371,7 +371,7 @@ export default function Home() {
 								))}
 							</div>
 						) : (
-							<div className='mt-6 text-center text-lg'>{`AI-powered search & chat for Paul Graham's essays.`}</div>
+							<div className='mt-6 text-center text-lg'>{`AI-powered search & chat for Hao Chen's tweets.`}</div>
 						)}
 					</div>
 				</div>
